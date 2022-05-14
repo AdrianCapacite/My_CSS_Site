@@ -1,0 +1,341 @@
+<!--
+    Web Development Lab 3 Part 3 My CSS Site
+    Adrian Capacite C21348423@mytudublin
+    28/10/21
+
+    Main page
+-->
+<html lang="en">
+<head>
+    <title>Adrian's CSS Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css-style.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="home">
+            <h1>Adrian's CSS Site<hr></h1>
+        </div>
+    </header>
+
+    <nav> 
+        <div id="navbar">
+            <div id="nav-left"><h1>Adrian's CSS Site</h1></div>
+            <div id="nav-right">
+            <a href="#home">Home</a> | <a href="#intro">About CSS</a> | <a href="#examples">Examples</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+    <!-- Start of Main Content -->
+    <main>
+        <!-- Table of Contents -->
+        <section class="contents-table">
+            <div></div>
+            <h2>Table of contents <hr></h2>
+            <ol>
+                <li><a href="#intro">What is CSS?</a></li>
+                <li><a href="#css-structure">CSS Structure</a></li>
+                <li><a href="#css-syntax">CSS Syntax</a></li>
+                <li><a href="#css-selectors">CSS Selectors</a></li>
+                <li><a href="#examples">Examples</a></li>
+            </ol>
+        </section>
+        <!-- End of Table of Contents -->
+
+        <!-- Intro -->
+        <section id="intro">
+            <h2>About CSS: What is CSS? <hr></h2>
+            <p>
+                Cascading Style Sheets (CSS) is a rule-based language used to describe how HTML content will be formatted and displayed in a web page. This allows web developers to make appealing graphics and styles for webpages.
+            </p>
+
+            <h3>Advantages of CSS</h3>
+            <p>
+                <b>CSS is powerful</b> as it allows web developers to style boring black and white pages of text to a webpage that is more pleasing to read for the users. 
+            </p>
+            <p>
+                <b>CSS provides flexibility</b> in how content can be displayed which every way you want and in all forms of device and screen form factors.
+            </p>
+            <p>
+                <b>CSS can be used to efficiently style</b> many pages with only one CSS file, this frees up time for the web developer when designing websites and provides better performance as  the browser can cache the CSS file rather than loading a new style for each webpage.
+            </p>
+
+            <h3>Example of CSS styling</h3>
+            <iframe src="example.html" width="66%" height="256px" frameborder="0" title="HTML page without CSS" class="float-right"></iframe>
+            <h4>Without CSS</h4>
+            <p>
+                When you first write your website, this is probably what it would look like at first without CSS. You probably wouldn't want your website to look plain and boring to read, well neither does anyone else.
+            </p>
+            <div class="clearfix"></div>
+            <iframe src="example-2.html" width="66%" height="256px" frameborder="0" title="HTML page with CSS" class="float-right"></iframe>
+            <h4>With CSS</h4>
+            <p>After you have written your website, you can add CSS to make it look nicer and easier to read, now you can publish your website to your family, friends and more!</p>
+            <div class="clearfix"></div>
+        </section>
+        <!-- End of Intro  -->
+
+        <!-- CSS Structure -->
+        <section id="css-structure">
+            <h2>CSS Structure <hr></h2>
+            <img src="images/inline-css.png" alt="Example of an inline style" width="66%" class="float-right">
+            <h3>Inline Style</h3>
+            <p>
+                Inline CSS are specified within the style attribute of a html tag and only styles the content within the tag. 
+            </p>
+            <p>Inline styles are only used rarely when you need a style for a unique tag e.g. a special style for a word in the middle of a paragraph.</p>
+            <div class="clearfix"></div>
+            <img src="images/internal-css.png" alt="Example of an inline style" width="66%" class="float-right">
+            <h3>Internal Style</h3>
+            <p>
+                Internal CSS are specified within the HTML document within the &lt;style&gt; tag in the &lt;head&gt; and only styles the content within the single HTML document.
+            </p>
+            <p>
+                Internal styles are used for when there is a unique style just for one webpage.
+            </p>
+            <div class="clearfix"></div>
+            <img src="images/external-css.png" alt="Example of an inline style" width="66%" class="float-right">
+            <img src="images/linking-external-css.png" alt="Example of an inline style" width="66%" class="float-right">
+            <h3>External Style</h3>
+            <p>
+                External CSS are specified in a separate .css file which is linked through the &lt;link&gt; tag in the HTML document and it can style multiple HTML documents that link to it.
+            </p>
+            <p>External styles is the recommended form of writing styles for a whole website. E.g. if you change the colour of your navbar or accent colour you only need to edit one value</p>
+            <div class="clearfix"></div>
+        </section>
+        <!-- End of CSS Structure -->
+
+        <!-- CSS Syntax -->
+        <section id="css-syntax">
+            <h2>CSS Syntax <hr></h2>
+            <p>CSS must follow a syntax shown below in order to work. it consists of a selector, declarations and within that, the property and value.</p>
+            <div class="css-style"> <!-- Code Example -->
+                <pre>           Declaration
+        ↓               ↓
+<span class="selector">p</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span>}
+↑                 ↑         ↑
+selectors      property   value</pre>
+            </div> <!-- End of Code Example-->
+            <p>The selector specifies what HTML element will it style.</p>
+            <p>The declaration contains a property and value. The declaration is used to specify what style should be applied.</p>
+        </section>
+        <!-- End of CSS Syntax -->
+
+        <!-- CSS Selectors-->
+        <section id="css-selectors">
+            <h2>CSS Selectors <hr></h2>
+            <p>CSS selectors are used to specify what HTML element will be styled. Selectors come before the declaration. CSS selectors can be put into 5 categories:</p>
+            <ul>
+                <li><b>Simple selectors</b> - selects elements on tag name, id or class</li>
+                <div class="css-style"> <!-- Code Example - Simple Selectors -->
+                    <div> 
+                        <span class="selector">p</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects all p elements */</span>
+                    </div>
+                    <div> 
+                        <span class="selector">#my-id</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects an element with an id of 'my-id' */</span>
+                    </div>
+                    <div> 
+                        <span class="selector">.my-class</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects all elements with an class of 'my-class' */</span>
+                    </div>
+                    <div> 
+                        <span class="selector">p, a, h1</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* a group selector uses multiple selectors and applies the same style to all */</span>
+                    </div>
+                </div> <!-- End of Code Example -->
+                <li><b>Combinator selectors</b> - selects elements based on a specific relationship between them</li>
+                
+                <div class="css-style"> <!-- Code Example - Combinator selectors-->
+                    <div> 
+                        <span class="selector">section p</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects all p elements within section */</span>
+                    </div>
+                    <div> 
+                        <span class="selector">nav>a</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects p elements which is an immediate child of nav */</span>
+                    </div>
+                    <div> 
+                        <span class="selector">img+p</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment">/* selects immediate child after img element which is a p element*/</span>
+                    </div>
+                    <div> 
+                        <span class="selector">img~p</span> {<span class="property">color</span>: <span class="value">red</span>; <span class="property">font-size</span>: <span class="value">16px</span> } <span class="comment"><span class="comment">/* selects all child after img element which is a p element */</span></span>
+                    </div>
+                </div> <!-- End of Code Example-->
+                <li><b>Pseudo-class selectors</b> - selects elements based on their state</li>
+                <li><b>Pseudo-elements selectors</b> - selects and styles a part of an element</li>
+                <li><b>Attribute selectors</b> - selects elements based on an attribute or attribute value</li>
+            </ul>
+        </section>
+        <!-- End of CSS Selectors-->
+
+        <!-- Examples -->
+        <section id="examples">
+            <h2>CSS Examples<hr></h2>
+            <p>
+                I have written 20 examples of different CSS properties in <a href="codepen.io">codepen.io</a>. You can find more of my CodePens <a href="https://codepen.io/AdrianTUD/">by clicking here</a>
+            </p>
+            
+            <div> <!-- Start of CodePen Examples-->
+                <h3>1. Styling a Paragraph</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 1. Styling a Paragraph" src="https://codepen.io/AdrianTUD/embed/preview/JjybdNw?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/JjybdNw">
+                    Lab4 1. Styling a Paragraph</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+    
+                <h3>2. Styling a Heading</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 2. Styling a Heading" src="https://codepen.io/AdrianTUD/embed/preview/zYdoGEJ?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/zYdoGEJ">
+                    Lab4 2. Styling a Heading</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                <h3>3. CSS Colour:: Names</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 3. CSS Colour:: Names" src="https://codepen.io/AdrianTUD/embed/preview/LYjbVmo?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/LYjbVmo">
+                    Lab4 3. CSS Colour:: Names</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+    
+                <h3>4. CSS Colour:: RGB </h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 4. CSS Colour:: RGB" src="https://codepen.io/AdrianTUD/embed/preview/RwZoPYW?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/RwZoPYW">
+                    Lab4 4. CSS Colour:: RGB</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+    
+                <h3>5. CSS Colour:: HEX</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 5. CSS Colour:: HEX" src="https://codepen.io/AdrianTUD/embed/preview/dyzOogb?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/dyzOogb">
+                    Lab4 5. CSS Colour:: HEX</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>6. CSS Selectors</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 6. CSS Selectors" src="https://codepen.io/AdrianTUD/embed/preview/porNJGL?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/porNJGL">
+                    Lab4 6. CSS Selectors</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>7. Id Selector</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 7. ID Selectors" src="https://codepen.io/AdrianTUD/embed/preview/PoKbqMp?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/PoKbqMp">
+                    Lab4 7. ID Selectors</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>8. Class Selector</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 8. Class Selector" src="https://codepen.io/AdrianTUD/embed/preview/oNeYjgX?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/oNeYjgX">
+                    Lab4 8. Class Selector</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>9. Centering a Container</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 9. Centering a Container" src="https://codepen.io/AdrianTUD/embed/preview/RwZoWro?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/RwZoWro">
+                    Lab4 9. Centering a Container</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>10. Centering text in a container</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 10. Centering " src="https://codepen.io/AdrianTUD/embed/preview/porNjyO?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/porNjyO">
+                    Lab4 10. Centering </a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>11. Background-color</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 11. Background-color" src="https://codepen.io/AdrianTUD/embed/preview/yLoVgJR?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/yLoVgJR">
+                    Lab4 11. Background-color</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                
+                <h3>12. Background-image</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 12.Background-image" src="https://codepen.io/AdrianTUD/embed/preview/dyzONpG?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/dyzONpG">
+                    Lab4 12.Background-image</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>13. Colour</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 13.Colour" src="https://codepen.io/AdrianTUD/embed/preview/LYjbxyG?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/LYjbxyG">
+                    Lab4 13.Colour</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>14. CSS Text:: Text Alignment</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 14.CSS Text:: Text Alignment" src="https://codepen.io/AdrianTUD/embed/preview/eYEBgEa?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/eYEBgEa">
+                    Lab4 14.CSS Text:: Text Alignment</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>15. CSS Text:: Text Decoration</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 15.CSS Text:: Text Decoration" src="https://codepen.io/AdrianTUD/embed/preview/ZEJBLaZ?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/ZEJBLaZ">
+                    Lab4 15.CSS Text:: Text Decoration</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>16. CSS Fonts</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 16.CSS Fonts" src="https://codepen.io/AdrianTUD/embed/preview/jOLVyZQ?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/jOLVyZQ">
+                    Lab4 16.CSS Fonts</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>17. Styling Links</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 17.Styling Links" src="https://codepen.io/AdrianTUD/embed/preview/ZEJBLxN?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/ZEJBLxN">
+                    Lab4 17.Styling Links</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>18. Inline Blocks – Old way using float</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 18.Inline Blocks - Old way using float" src="https://codepen.io/AdrianTUD/embed/preview/JjybEZX?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/JjybEZX">
+                    Lab4 18.Inline Blocks - Old way using float</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>19. Inline Blocks – New Way</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 19.Inline Blocks - New way" src="https://codepen.io/AdrianTUD/embed/preview/JjybEBX?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/JjybEBX">
+                    Lab4 19.Inline Blocks - New way</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+
+                <h3>20. Setting the width and height of an iFrame</h3>
+                <iframe height="300" style="width: 100%;" scrolling="no" title="Lab4 20.Setting the width and height of an iFrame" src="https://codepen.io/AdrianTUD/embed/preview/OJjbWwv?default-tab=css%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/AdrianTUD/pen/OJjbWwv">
+                    Lab4 20.Setting the width and height of an iFrame</a> by Adrian Capacite (<a href="https://codepen.io/AdrianTUD">@AdrianTUD</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                </iframe>
+                
+            </div> <!-- End of CodePen Examples -->
+            
+        </section>
+        <!-- End of Examples -->
+    </main>
+    <!-- End of Main Content -->
+
+    <footer>
+        <div id="footer">
+            <p>
+                <p>&copy;2021 Adrian Capacite</p>
+                <p>C21348423@mytudublin</p>
+                Sources:
+                <ol>
+                    <li>Introduction to CSS by Jonathan McCarthy</li>
+                    <li><a href="https://www.w3schools.com/">https://www.w3schools.com/</a></li>
+                    <li>Background image: <a href="https://unsplash.com/photos/vw3Ahg4x1tY">https://unsplash.com/photos/vw3Ahg4x1tY</a></li>
+                </ol>
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

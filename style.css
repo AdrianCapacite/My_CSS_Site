@@ -1,0 +1,176 @@
+/*
+    Web Development Lab 3 Part 3 My CSS Site
+    Adrian Capacite C21348423@mytudublin
+    28/10/21
+    
+    Main CSS styles
+*/
+/* Body styles */
+body {
+    margin: 0;
+    background-image: url(images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #222;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    width: 100%;
+    padding: 256px 0 4px;
+}
+header>div {
+    max-width: 1024px;
+    margin: 8px auto;
+    padding: 16px;
+    border-radius: 2rem;
+    backdrop-filter: blur(20px);
+    background-color: #fffb;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+/* End of body styles */
+
+/* Nav bar style */
+nav {
+    width: 100%;
+    padding: 8px 0 8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav>div {
+    max-width: 1024px;
+    margin: 8px auto;
+    padding: 16px;
+    border-radius: 2rem;
+    backdrop-filter: blur(20px);
+    background-color: #fffb;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+nav a {
+    text-decoration: none;
+    color: #222;
+    padding: 4px 16px;
+    border-radius: 2rem;
+    transition: ease-in-out color .2s;
+    transition: ease-in-out background-color .2s;
+    transition: ease-in-out box-shadow .2s;
+}
+nav a:hover {
+    text-decoration: underline;
+    color: #007acc;
+    box-shadow: 0 0px 4px 0px #000a inset;
+}
+#nav-left {
+    font-size: 1em;
+    vertical-align: middle;
+    float: left;
+}
+#nav-left h1 {
+    margin: 0 0px;
+}
+#nav-right {
+    font-size: 1.3em;
+    float: right;
+}
+/* End of nav bar styles */
+
+main {
+    width: 100%;
+    padding: 8px 0;
+}
+main>div, main>section {
+    max-width: 1024px;
+    margin: 8px auto;
+    padding: 16px;
+    border-radius: 2rem;
+    backdrop-filter: blur(20px);
+    background-color: #fffb;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+footer {
+    width: 100%;
+    padding: 8px 0 32px;
+}
+footer>div {
+    max-width: 1024px;
+    margin: 8px auto;
+    padding: 16px;
+    border-radius: 2rem;
+    backdrop-filter: blur(20px);
+    background-color: #fffb;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+
+/* Content style*/
+a {
+    color: #222;
+}
+a:hover {
+    color: #007acc;
+}
+h1 hr {
+    width: 66%;
+    margin-left: 0;
+    height: 2px;
+    border: none;
+    border-radius: 2rem;
+    background-color: #007acc;
+}
+h2 hr {
+    width: 33%;
+    margin-left: 0;
+    height: 2px;
+    border: none;
+    border-radius: 2rem;
+    background-color: #007acc;
+}
+img {
+    margin: 1em 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+iframe {
+    margin: 16px 0;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 4px 10px 0px #000a;
+}
+/* End of Content style*/
+
+
+/* Table of contents style */
+.contents-table li {
+    font-size: larger;
+    margin: 16px 0;
+}
+.contents-table a {
+    text-decoration: none;
+    color: #222;
+    border-radius: 2rem;
+    padding: 4px 16px;
+    transition: ease-in-out color .2s;
+    transition: ease-in-out background-color .2s;
+    transition: ease-in-out box-shadow .2s;
+}
+.contents-table a:hover {
+    text-decoration: underline;
+    color: #007acc;
+    transition:ease-in-out color.2s;
+    box-shadow: 0 0px 4px 0px #000a;
+}
+/* End of Table of contents style */
+
+
+/* Float classes */
+.float-left {
+    float: left;
+}
+.float-right {
+    float:right;
+    margin-left: 8px;
+}
+.clearfix {
+    clear: both;
+}
+/* End of Float classes */

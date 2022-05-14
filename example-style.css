@@ -1,0 +1,18 @@
+div {
+    max-width: 66%;
+    margin: auto;
+}
+body {
+    background-color: #f0f0f0;
+}
+h1 {
+    color:#007acc;
+}
+hr {
+    border-style: none;
+    height: 2px;
+    background-color: #007acc;
+}
+p {
+    font-size: 1.5em;
+}

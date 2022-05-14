@@ -1,0 +1,27 @@
+/*
+    Web Development Lab 3 Part 3 My CSS Site
+    Adrian Capacite C21348423@mytudublin
+    28/10/21
+
+    CSS for styling CSS examples
+*/
+.css-style {
+    background-color: #1e1e1eee;
+    color: #d4d4d4;
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 10px 0px #000a;
+}
+.css-style .selector {
+    color: #d7ba7d;
+}
+.css-style .property {
+    color: #9cdcfe;
+}
+.css-style .value {
+    color: #b5cea8;
+}
+.css-style .comment {
+    color: #6a9949;
+}
